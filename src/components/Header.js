@@ -7,11 +7,13 @@ export default function Header() {
       <img src={photo} alt="Avatar" width="300" />
       <h1>Serhii Pylypenko</h1>
 
+      <h2>Front-End Developer</h2>
+
       {/* 
             Contacts 
         */}
 
-      <h2>Contacts</h2>
+      <h3>Contacts</h3>
       <ul>
         <li>
           Tel.: <a href="tel:+380967199192">+38 (096) 719 91 92</a>{" "}
