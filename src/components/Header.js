@@ -3,7 +3,7 @@ import photo from "../assets/photo.jpg";
 
 export default function Header() {
   return (
-    <section>
+    <section className="header">
       <img src={photo} alt="Avatar" width="300" />
       <h1>Serhii Pylypenko</h1>
 

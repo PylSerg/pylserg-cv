@@ -1,4 +1,25 @@
-section {
+// Variables
+$backgroundColor: #242b47;
+$textColor: #ccc;
+
+// Styles
+.header {
   display: flex;
   flex-direction: column;
+
+  color: $textColor;
+
+  background-color: $backgroundColor;
+}
+
+.header a {
+  color: $textColor;
+
+  text-decoration: none;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
