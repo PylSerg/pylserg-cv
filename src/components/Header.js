@@ -38,11 +38,11 @@ export default function Header() {
         */}
 
       <p>
-        Hello! I'm Serhii. I don't have much commercial experience, but five
-        years of experience with HTML and CSS, and two years of using JavaScript
-        allows me to handle just about everything. I am looking for a company
-        that has interesting projects, there is an opportunity for further
-        development and professional growth.
+        Hello! I'm Serhii and I'm front-end developer. I don't have much
+        commercial experience, but five years of experience with HTML and CSS,
+        and two years of using JavaScript allows me to handle just about
+        everything. I am looking for a company that has interesting projects,
+        there is an opportunity for further development and professional growth.
       </p>
     </section>
   );
