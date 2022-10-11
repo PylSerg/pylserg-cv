@@ -17,7 +17,7 @@ export default function Header() {
       <ul>
         <li>
           Tel.: <a href="tel:+380967199192">+38 (096) 719 91 92</a>{" "}
-          <a href="viber://chat?number=380967199192">[Viber]</a>
+          <a href="viber://chat?number=380967199192">[ Viber ]</a>
         </li>
 
         <li>
