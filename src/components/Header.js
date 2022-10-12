@@ -7,6 +7,13 @@ export default function Header() {
   const [firstMessage, setFirstMessage] = useState(false);
   const [secondMessage, setSecondMessage] = useState(false);
   const [thirdMessage, setThirdMessage] = useState(false);
+  const [fourthMessage, setFourthMessage] = useState(false);
+  const [guestMessage, setGuestMessage] = useState({
+    readOnly: false,
+    sended: false,
+    text: "",
+    message: "",
+  });
 
   useEffect(() => {
     setTimeout(() => {
@@ -25,6 +32,15 @@ export default function Header() {
       showThirdMessage();
     }, 6500);
   }, []);
+
+  useEffect(() => {
+    if (guestMessage.sended)
+      setTimeout(() => {
+        showFourthMessage();
+      }, 4000);
+
+    return;
+  }, [guestMessage.sended]);
 
   function showFirstMessage() {
     setFirstMessage(true);
@@ -51,6 +67,32 @@ export default function Header() {
     setTimeout(() => {
       setTypingMessage(false);
     }, 1250);
+  }
+
+  function showFourthMessage() {
+    setFourthMessage(true);
+    setTypingMessage(true);
+
+    setTimeout(() => {
+      setTypingMessage(false);
+    }, 1250);
+  }
+
+  function changesGuestMessage(e) {
+    setGuestMessage({
+      ...guestMessage,
+      text: e.currentTarget.value,
+      message: e.currentTarget.value,
+    });
+  }
+
+  function sendedGuestMessage() {
+    setGuestMessage({
+      ...guestMessage,
+      readOnly: true,
+      sended: true,
+      text: "",
+    });
   }
 
   return (
@@ -99,50 +141,94 @@ export default function Header() {
 
       <div className="message__container">
         <h3 className="message__title">
-          About me{" "}
+          About me
           {typingMessage && (
             <span className="message__title-typing">Serhii is typing...</span>
           )}
         </h3>
 
-        {!firstMessage && <p className="message__preload">No messages</p>}
+        <div className="message__field">
+          {!firstMessage && <p className="message__preload">No messages</p>}
 
-        {firstMessage && (
-          <div className="message__block">
-            <img className="message__avatar" src={photo} alt="Avatar" />
+          {firstMessage && (
+            <div className="message__block">
+              <img className="message__avatar" src={photo} alt="Avatar" />
 
-            <Typing />
+              <Typing />
 
-            <p className="message__text">
-              Hello! I'm Serhii and I'm front-end developer.
-            </p>
-          </div>
-        )}
-        {secondMessage && (
-          <div className="message__block">
-            <img className="message__avatar" src={photo} alt="Avatar" />
+              <p className="message__text">
+                Hello! I'm Serhii and I'm front-end developer.
+              </p>
+            </div>
+          )}
 
-            <Typing />
+          {secondMessage && (
+            <div className="message__block">
+              <img className="message__avatar" src={photo} alt="Avatar" />
 
-            <p className="message__text">
-              I don't have much commercial experience, but five years of
-              experience with HTML and CSS, and two years of using JavaScript
-              allows me to handle just about everything.
-            </p>
-          </div>
-        )}
-        {thirdMessage && (
-          <div className="message__block">
-            <img className="message__avatar" src={photo} alt="Avatar" />
+              <Typing />
 
-            <Typing />
+              <p className="message__text">
+                I don't have much commercial experience, but five years of
+                experience with HTML and CSS, and two years of using JavaScript
+                allows me to handle just about everything.
+              </p>
+            </div>
+          )}
 
-            <p className="message__text">
-              I am looking for a company that has interesting projects, there is
-              an opportunity for further development and professional growth.
-            </p>
-          </div>
-        )}
+          {thirdMessage && (
+            <div className="message__block">
+              <img className="message__avatar" src={photo} alt="Avatar" />
+
+              <Typing />
+
+              <p className="message__text">
+                I am looking for a company that has interesting projects, there
+                is an opportunity for further development and professional
+                growth.
+              </p>
+            </div>
+          )}
+
+          {guestMessage.sended && (
+            <div className="message__block message__block--guest">
+              <p className="message__text message__text--guest">
+                {guestMessage.message}
+              </p>
+            </div>
+          )}
+
+          {fourthMessage && (
+            <div className="message__block">
+              <img className="message__avatar" src={photo} alt="Avatar" />
+
+              <Typing />
+
+              <p className="message__text">
+                You can contact me using the given contacts.
+              </p>
+            </div>
+          )}
+        </div>
+
+        <div className="message__send">
+          <input
+            type="text"
+            maxLength="120"
+            value={guestMessage.text}
+            placeholder="Message"
+            onChange={changesGuestMessage}
+            readOnly={guestMessage.readOnly}
+          />
+
+          <button
+            className="message__send-button"
+            type="button"
+            onClick={sendedGuestMessage}
+          >
+            send
+          </button>
+        </div>
       </div>
     </section>
   );
