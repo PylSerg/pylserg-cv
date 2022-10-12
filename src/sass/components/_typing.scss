@@ -1,11 +1,17 @@
 .dot-block {
+  position: absolute;
+  left: 0;
+  top: 0;
   display: flex;
 
-  margin-top: 20px;
   padding: 8px;
 
   background-color: #121729;
   border-radius: 0px 15px 15px 15px;
+
+  animation-name: hide-typing;
+  animation-delay: 1250ms;
+  animation-fill-mode: forwards;
 }
 
 .dot-1,
@@ -58,5 +64,14 @@
 
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes hide-typing {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

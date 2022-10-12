@@ -31,6 +31,8 @@
 }
 
 .header__main {
+  margin-bottom: 50px;
+
   @media screen and (min-width: $tablet-width) {
     margin-left: 30px;
   }
@@ -124,18 +126,26 @@ h2 {
   margin-left: 15px;
 }
 
-.header p {
+.message__block {
+  position: relative;
+
+  width: 100%;
+
+  margin-top: 10px;
+}
+
+.message__text {
   display: block;
   opacity: 0;
 
-  margin-top: 50px;
+  margin: 0;
   padding: 20px;
 
   background-color: #121729;
   border-radius: 0px 15px 15px 15px;
 
   animation-name: message;
-  animation-delay: 1250ms;
+  animation-delay: 1500ms;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
