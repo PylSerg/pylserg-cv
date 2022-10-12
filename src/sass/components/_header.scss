@@ -18,7 +18,7 @@
   }
 }
 
-.header img {
+.header__photo {
   display: block;
 
   margin: 0 auto;
@@ -67,10 +67,10 @@ h2 {
 
 .header h3 {
   font-size: 20px;
+}
 
-  margin: 0;
+.contacts__title {
   margin-top: 50px;
-  padding: 0;
 
   @media screen and (min-width: $tablet-width) {
     display: none;
@@ -126,12 +126,71 @@ h2 {
   margin-left: 15px;
 }
 
-.message__block {
+.message__container {
   position: relative;
+
+  width: calc(100% - 20px);
+
+  padding: 10px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  background-color: #121729;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.message__title {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  display: flex;
+  align-items: flex-end;
 
   width: 100%;
 
+  margin: 0;
+  padding: 10px;
+
+  background-color: #13223a;
+}
+
+.message__title-typing {
+  display: block;
+
+  color: #888;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+
+  margin-left: 30px;
+}
+
+.message__preload {
+  display: block;
+
+  color: #aaa;
+  font-style: italic;
+  text-align: center;
+}
+
+.message__block {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+
   margin-top: 10px;
+}
+
+.message__avatar {
+  width: 32px;
+  height: 32px;
+
+  margin-right: 10px;
+
+  border-radius: 100%;
 }
 
 .message__text {
@@ -141,7 +200,9 @@ h2 {
   margin: 0;
   padding: 20px;
 
-  background-color: #121729;
+  color: #fff;
+
+  background-color: #183e79;
   border-radius: 0px 15px 15px 15px;
 
   animation-name: message;
