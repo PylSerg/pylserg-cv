@@ -1,0 +1,62 @@
+.dot-block {
+  display: flex;
+
+  margin-top: 20px;
+  padding: 8px;
+
+  background-color: #121729;
+  border-radius: 0px 15px 15px 15px;
+}
+
+.dot-1,
+.dot-2,
+.dot-3 {
+  width: 8px;
+  height: 8px;
+
+  background-color: #ccc;
+  border-radius: 100%;
+
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  animation-name: typing;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+.dot-1 {
+  animation-delay: 0ms;
+}
+
+.dot-2 {
+  animation-delay: 250ms;
+}
+
+.dot-3 {
+  animation-delay: 500ms;
+}
+
+@keyframes typing {
+  0% {
+    transform: translateY(0px);
+  }
+
+  25% {
+    transform: translateY(-4px);
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+
+  75% {
+    transform: translateY(4px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
