@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { RiSendPlaneFill, RiChatSmile3Line } from "react-icons/ri";
 import Typing from "./Typing";
 import photo from "../assets/photo.webp";
 
@@ -14,6 +15,7 @@ export default function Header() {
     text: "",
     message: "",
   });
+  const [sending, setSending] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -41,6 +43,12 @@ export default function Header() {
 
     return;
   }, [guestMessage.sended]);
+
+  useEffect(() => {
+    if (guestMessage.text.length >= 1) return setSending(true);
+
+    return setSending(false);
+  }, [guestMessage.text]);
 
   function showFirstMessage() {
     setFirstMessage(true);
@@ -212,6 +220,8 @@ export default function Header() {
         </div>
 
         <div className="message__send">
+          <RiChatSmile3Line className="message__icon" />
+
           <input
             type="text"
             maxLength="120"
@@ -225,8 +235,9 @@ export default function Header() {
             className="message__send-button"
             type="button"
             onClick={sendedGuestMessage}
+            disabled={!sending}
           >
-            send
+            <RiSendPlaneFill />
           </button>
         </div>
       </div>
