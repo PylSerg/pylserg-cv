@@ -1,4 +1,5 @@
 import React from "react";
+import Typing from "./Typing";
 import photo from "../assets/photo.webp";
 
 export default function Header() {
@@ -39,6 +40,8 @@ export default function Header() {
       {/* 
             About me
         */}
+
+      <Typing />
 
       <p>
         Hello! I'm Serhii and I'm front-end developer. I don't have much
