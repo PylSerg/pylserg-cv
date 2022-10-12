@@ -4,11 +4,18 @@
 
   padding: 30px 20px;
 
-  color: $header-text-color;
+  color: $text-color;
   font-size: 18px;
   font-weight: 400;
 
-  background-color: $header-background-color;
+  background-color: $sidebar-background-color;
+
+  @media screen and (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 30px;
+  }
 }
 
 .header img {
@@ -17,6 +24,16 @@
   margin: 0 auto;
 
   border-radius: 5px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.header__main {
+  @media screen and (min-width: $tablet-width) {
+    margin-left: 30px;
+  }
 }
 
 .header h1,
@@ -25,6 +42,10 @@ h2 {
 
   margin: 0;
   padding: 0;
+
+  @media screen and (min-width: $tablet-width) {
+    text-align-last: left;
+  }
 }
 
 .header h1 {
@@ -48,6 +69,10 @@ h2 {
   margin: 0;
   margin-top: 50px;
   padding: 0;
+
+  @media screen and (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .header ul {
@@ -56,11 +81,19 @@ h2 {
   padding: 0;
 
   list-style: none;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-top: 60px;
+  }
 }
 
 .header ul li:not(:last-child) {
   margin-left: 20px;
   margin-bottom: 14px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-left: 0;
+  }
 }
 
 .header ul li:last-child {
@@ -69,18 +102,26 @@ h2 {
   color: #888;
   font-size: 20px;
   font-style: italic;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-left: 0;
+  }
 }
 
 .header a {
-  color: $header-text-color;
+  color: #cce;
   font-style: italic;
   text-decoration: none;
 
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .header a + a {
   color: #6f3e92;
+  font-weight: 700;
+  font-style: normal;
+
+  margin-left: 15px;
 }
 
 .header p {
