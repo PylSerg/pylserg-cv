@@ -118,8 +118,8 @@ export default function Header() {
 
         <h2>Front-End Developer</h2>
 
-        {/* 
-            Contacts 
+        {/*
+            Contacts
         */}
 
         <h3 className="contacts__title">Contacts</h3>
@@ -143,7 +143,7 @@ export default function Header() {
         </ul>
       </div>
 
-      {/* 
+        {/*
             About me
         */}
 
