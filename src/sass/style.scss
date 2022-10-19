@@ -1,10 +1,13 @@
 @import "./variables";
 
 body {
-  background-color: #121729;
-
   margin: 0;
 
+  background-color: #121729;
+
+  color: $text-color;
+  font-size: 16px;
+  font-weight: 400;
   font-family: $main-fonts;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -15,10 +18,23 @@ code {
     monospace;
 }
 
+h2 {
+  color: #df6705;
+  font-size: 22px;
+  font-style: italic;
+}
+
+h3 {
+  font-size: 20px;
+}
+
 .page {
   max-width: 1024px;
   margin: 0 auto;
+
+  background-color: $main-background-color;
 }
 
 @import "./components/header";
+@import "./components/about-me";
 @import "./components/typing";
