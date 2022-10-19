@@ -94,6 +94,10 @@ export default function AboutMe() {
     });
   }
 
+  function sendedGuestMessageByEnter(e) {
+    if (e.charCode === 13) sendedGuestMessage();
+  }
+
   function sendedGuestMessage() {
     setGuestMessage({
       ...guestMessage,
@@ -186,6 +190,7 @@ export default function AboutMe() {
             value={guestMessage.text}
             placeholder="Message"
             onChange={changesGuestMessage}
+            onKeyPress={sendedGuestMessageByEnter}
             readOnly={guestMessage.readOnly}
           />
 
