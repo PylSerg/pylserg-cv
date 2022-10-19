@@ -1,0 +1,55 @@
+.projects {
+    margin-top: 50px;
+    padding: 0 20px;
+
+    @media screen and (min-width: $tablet-width) {
+        padding: 0 30px;
+    }
+}
+
+.projects__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 20px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.projects__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 260px;
+    height: 260px;
+
+
+
+    padding: 0;
+    margin: 0;
+
+    color: $text-color;
+
+    background-color: #fff;
+}
+
+.projects__link-block {}
+
+.projects__link {
+    color: $text-color;
+    text-decoration: none;
+}
+
+.projects__more {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    text-align: center;
+}
