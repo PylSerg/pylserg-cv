@@ -1,0 +1,30 @@
+.skills {
+    margin-top: 50px;
+    padding: 0 20px;
+
+    @media screen and (min-width: $tablet-width) {
+        padding: 0 30px;
+    }
+}
+
+.skills__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.skills__item {
+    font-size: 18px;
+
+    padding: 5px 20px;
+
+    background-color: #13223a;
+    border-radius: 15px;
+}
