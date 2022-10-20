@@ -28,6 +28,33 @@ export default function Projects() {
               GitHub
             </a>
           </div>
+
+          <div className="projects__stack-block">
+            <ul className="projects__stack-list">
+              <li className="projects__stack">HTML</li>
+              <li className="projects__stack">CSS/SASS</li>
+              <li className="projects__stack">JS</li>
+              <li className="projects__stack">React</li>
+              <li className="projects__stack">Redux</li>
+              <li className="projects__stack">AJAX</li>
+              <li className="projects__stack">REST API</li>
+              <li className="projects__stack">SPA Deploy</li>
+            </ul>
+
+            <ul className="projects__languages-list">
+              <li className="projects__language">
+                JavaScript - <i>75.0%</i>
+              </li>
+
+              <li className="projects__language">
+                CSS - <i>24.4%</i>
+              </li>
+
+              <li className="projects__language">
+                HTML - <i>0.6%</i>
+              </li>
+            </ul>
+          </div>
         </li>
 
         <li className="projects__item">
@@ -51,6 +78,28 @@ export default function Projects() {
             >
               GitHub
             </a>
+          </div>
+
+          <div className="projects__stack-block">
+            <ul className="projects__stack-list">
+              <li className="projects__stack">HTML</li>
+              <li className="projects__stack">CSS/SASS</li>
+              <li className="projects__stack">JS</li>
+            </ul>
+
+            <ul className="projects__languages-list">
+              <li className="projects__language">
+                HTML - <i>69.8%</i>
+              </li>
+
+              <li className="projects__language">
+                SCSS - <i>27.2%</i>
+              </li>
+
+              <li className="projects__language">
+                JavaScript - <i>3.0%</i>
+              </li>
+            </ul>
           </div>
         </li>
 
@@ -76,10 +125,32 @@ export default function Projects() {
               GitHub
             </a>
           </div>
+
+          <div className="projects__stack-block">
+            <ul className="projects__stack-list">
+              <li className="projects__stack">HTML</li>
+              <li className="projects__stack">CSS/SASS</li>
+              <li className="projects__stack">JS</li>
+            </ul>
+
+            <ul className="projects__languages-list">
+              <li className="projects__language">
+                JavaScript - <i>54.6%</i>
+              </li>
+
+              <li className="projects__language">
+                SCSS - <i>30.0%</i>
+              </li>
+
+              <li className="projects__language">
+                HTML - <i>15.4%</i>
+              </li>
+            </ul>
+          </div>
         </li>
 
         <li className="projects__item">
-          <span className="projects__item-title">Resolution Calculator</span>
+          <span className="projects__item-title">Resolution Calc</span>
 
           <div className="projects__link-block">
             <a
@@ -100,6 +171,29 @@ export default function Projects() {
               GitHub
             </a>
           </div>
+
+          <div className="projects__stack-block">
+            <ul className="projects__stack-list">
+              <li className="projects__stack">HTML</li>
+              <li className="projects__stack">CSS/SASS</li>
+              <li className="projects__stack">JS</li>
+              <li className="projects__stack">SPA Deploy</li>
+            </ul>
+
+            <ul className="projects__languages-list">
+              <li className="projects__language">
+                JavaScript - <i>57.4%</i>
+              </li>
+
+              <li className="projects__language">
+                SCSS - <i>21.7%</i>
+              </li>
+
+              <li className="projects__language">
+                HTML - <i>20.9%</i>
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
 
@@ -110,7 +204,7 @@ export default function Projects() {
         rel="noreferrer"
       >
         More projects <br />
-        on GitHub
+        on <b>GitHub</b>
       </a>
     </section>
   );
