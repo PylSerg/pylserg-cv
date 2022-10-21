@@ -51,11 +51,25 @@
 
 .message__field {
   width: calc(100% - 20px);
-  min-height: 280px;
+  height: calc(560px - 2 * 60px);
 
   padding: 60px 10px;
 
   overflow-y: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    height: calc(400px - 2 * 60px);
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    height: calc(360px - 2 * 60px);
+  }
 }
 
 .message__preload {
@@ -169,7 +183,7 @@
     font-weight: 700;
   }
 
-  &:placeholder-shown + .message__send-button {
+  &:placeholder-shown+.message__send-button {
     color: #555;
 
     cursor: not-allowed;
@@ -213,6 +227,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }

@@ -17,6 +17,8 @@ export default function AboutMe() {
   });
   const [sending, setSending] = useState(false);
 
+  const messenger = document.querySelector("#messenger");
+
   useEffect(() => {
     setTimeout(() => {
       showFirstMessage();
@@ -36,10 +38,13 @@ export default function AboutMe() {
   }, []);
 
   useEffect(() => {
-    if (guestMessage.sended)
+    if (guestMessage.sended) {
+      showLastMessage();
+
       setTimeout(() => {
         showFourthMessage();
       }, 4000);
+    }
 
     return;
   }, [guestMessage.sended]);
@@ -49,6 +54,10 @@ export default function AboutMe() {
 
     return setSending(false);
   }, [guestMessage.text]);
+
+  function showLastMessage() {
+    messenger.scrollTop = messenger.scrollHeight;
+  }
 
   function showFirstMessage() {
     setFirstMessage(true);
@@ -80,6 +89,10 @@ export default function AboutMe() {
   function showFourthMessage() {
     setFourthMessage(true);
     setTypingMessage(true);
+
+    setTimeout(() => {
+      showLastMessage();
+    }, 10);
 
     setTimeout(() => {
       setTypingMessage(false);
@@ -117,7 +130,7 @@ export default function AboutMe() {
           )}
         </h3>
 
-        <div className="message__field">
+        <div className="message__field" id="messenger">
           {!firstMessage && <p className="message__preload">No messages</p>}
 
           {firstMessage && (
