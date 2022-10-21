@@ -12,13 +12,23 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
 }
 
 .toggle-button {
     font-size: 18px;
+    line-height: 0.5;
 
-    width: 36px;
-    height: 36px;
+    margin: 0;
+    padding: 3px;
+
+    color: $text-color;
+
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid $text-color;
+
+    cursor: pointer;
 }
 
 .skills__list {

@@ -2,16 +2,16 @@ import { useState } from "react";
 import { TfiViewListAlt, TfiViewGrid } from "react-icons/tfi";
 
 export default function Skills() {
-  const [listType, setListType] = useState({
+  const [listStyle, setListStyle] = useState({
     type: "tiles",
     style: "skills__list--tiles",
   });
 
   function changeListType() {
-    if (listType.type === "tiles")
-      return setListType({ type: "list", style: "skills__list--list" });
+    if (listStyle.type === "tiles")
+      return setListStyle({ type: "list", style: "skills__list--list" });
 
-    return setListType({ type: "tiles", style: "skills__list--tiles" });
+    return setListStyle({ type: "tiles", style: "skills__list--tiles" });
   }
 
   return (
@@ -24,12 +24,14 @@ export default function Skills() {
           type="button"
           onClick={changeListType}
         >
-          {listType.type === "tiles" && <TfiViewListAlt />}
-          {listType.type === "list" && <TfiViewGrid />}
+          {listStyle.type === "tiles" && (
+            <TfiViewListAlt title="Show as a list" />
+          )}
+          {listStyle.type === "list" && <TfiViewGrid title="Show as a tiles" />}
         </button>
       </div>
 
-      <ul className={["skills__list", listType.style].join(" ")}>
+      <ul className={["skills__list", listStyle.style].join(" ")}>
         <li className="skills__item">HTML5</li>
         <li className="skills__item">CSS3/SCSS/SASS</li>
         <li className="skills__item">JavaScript</li>
