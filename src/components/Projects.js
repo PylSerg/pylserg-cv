@@ -58,6 +58,57 @@ export default function Projects() {
         </li>
 
         <li className="projects__item">
+          <span className="projects__item-title">Panther DB</span>
+
+          <div className="projects__link-block">
+            <a
+              href="https://pnthr.netlify.app/"
+              className="projects__link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Browse
+            </a>
+
+            <a
+              href="https://github.com/PylSerg/panther-database"
+              className="projects__link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+          </div>
+
+          <div className="projects__stack-block">
+            <ul className="projects__stack-list">
+              <li className="projects__stack">HTML</li>
+              <li className="projects__stack">CSS/SASS</li>
+              <li className="projects__stack">JS</li>
+              <li className="projects__stack">React</li>
+              <li className="projects__stack">Redux</li>
+              <li className="projects__stack">AJAX</li>
+              <li className="projects__stack">REST API</li>
+              <li className="projects__stack">SPA Deploy</li>
+            </ul>
+
+            <ul className="projects__languages-list">
+              <li className="projects__language">
+                JavaScript - <i>85.4%</i>
+              </li>
+
+              <li className="projects__language">
+                SCSS - <i>14.1%</i>
+              </li>
+
+              <li className="projects__language">
+                HTML - <i>0.5%</i>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li className="projects__item">
           <span className="projects__item-title">Ukrcottage</span>
 
           <div className="projects__link-block">
@@ -144,53 +195,6 @@ export default function Projects() {
 
               <li className="projects__language">
                 HTML - <i>15.4%</i>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li className="projects__item">
-          <span className="projects__item-title">Panther DB</span>
-
-          <div className="projects__link-block">
-            <a
-              href="https://pnthr.netlify.app/"
-              className="projects__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Browse
-            </a>
-
-            <a
-              href="https://github.com/PylSerg/panther-database"
-              className="projects__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-          </div>
-
-          <div className="projects__stack-block">
-            <ul className="projects__stack-list">
-              <li className="projects__stack">HTML</li>
-              <li className="projects__stack">CSS/SASS</li>
-              <li className="projects__stack">JS</li>
-              <li className="projects__stack">SPA Deploy</li>
-            </ul>
-
-            <ul className="projects__languages-list">
-              <li className="projects__language">
-                JavaScript - <i>85.4%</i>
-              </li>
-
-              <li className="projects__language">
-                SCSS - <i>14.1%</i>
-              </li>
-
-              <li className="projects__language">
-                HTML - <i>0.5%</i>
               </li>
             </ul>
           </div>
