@@ -47,6 +47,8 @@ export default function AboutMe() {
     }
 
     return;
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [guestMessage.sended]);
 
   useEffect(() => {

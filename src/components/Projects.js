@@ -150,11 +150,11 @@ export default function Projects() {
         </li>
 
         <li className="projects__item">
-          <span className="projects__item-title">Resolution Calc</span>
+          <span className="projects__item-title">Panther DB</span>
 
           <div className="projects__link-block">
             <a
-              href="https://resolution-calc.netlify.app/"
+              href="https://pnthr.netlify.app/"
               className="projects__link"
               target="_blank"
               rel="noreferrer"
@@ -163,7 +163,7 @@ export default function Projects() {
             </a>
 
             <a
-              href="https://github.com/PylSerg/resolution-calc"
+              href="https://github.com/PylSerg/panther-database"
               className="projects__link"
               target="_blank"
               rel="noreferrer"
@@ -182,15 +182,15 @@ export default function Projects() {
 
             <ul className="projects__languages-list">
               <li className="projects__language">
-                JavaScript - <i>57.4%</i>
+                JavaScript - <i>85.4%</i>
               </li>
 
               <li className="projects__language">
-                SCSS - <i>21.7%</i>
+                SCSS - <i>14.1%</i>
               </li>
 
               <li className="projects__language">
-                HTML - <i>20.9%</i>
+                HTML - <i>0.5%</i>
               </li>
             </ul>
           </div>
