@@ -1,0 +1,28 @@
+.languages {
+    margin-top: 50px;
+    padding: 0 20px;
+
+    @media screen and (min-width: $tablet-width) {
+        padding: 0 30px;
+    }
+}
+
+.languages__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.languages__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &>img {
+        margin-right: 10px;
+    }
+}
