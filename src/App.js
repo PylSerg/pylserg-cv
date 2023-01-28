@@ -3,7 +3,8 @@ import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import Languages from "./components/Langauges";
+import Languages from "./components/Languages";
+import Download from "./components/Download";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Projects />
       <Skills />
       <Languages />
+      <Download />
     </div>
   );
 }
