@@ -35,6 +35,7 @@ export default function Skills() {
         <li className="skills__item">HTML5</li>
         <li className="skills__item">CSS3/SCSS/SASS</li>
         <li className="skills__item">JavaScript</li>
+        <li className="skills__item">TypeScript</li>
         <li className="skills__item">React</li>
         <li className="skills__item">React Hooks</li>
         <li className="skills__item">React Hook Form</li>
